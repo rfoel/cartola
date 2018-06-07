@@ -1,0 +1,26 @@
+@charset "utf-8"
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:700')
+@import "bulma/sass/utilities/initial-variables"
+@import "bulma/sass/utilities/functions"
+
+$primary: #e3672a
+$link: $primary
+$dark: #717271
+
+@import "bulma/bulma.sass"
+
+.app-wrapper
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+  background: $light
+
+.flex-grow
+  flex-grow: 1
+
+::selection
+  background: $primary
+
+.title
+  font-family: 'Roboto Slab', serif
