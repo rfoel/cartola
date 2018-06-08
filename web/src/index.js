@@ -7,7 +7,6 @@ import { Provider } from './utils/store'
 
 import Router from './utils/router'
 import './sass/index.css'
-import registerServiceWorker from './registerServiceWorker'
 
 fontawesome.library.add(solid, brands)
 
@@ -17,5 +16,3 @@ render(
   </Provider>,
   document.querySelector('#root')
 )
-
-registerServiceWorker()

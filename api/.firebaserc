@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "api-cartola",
+    "production": "api-cartola"
+  }
+}
