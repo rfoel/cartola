@@ -15,6 +15,7 @@
     "express": "^4.16.2",
     "firebase-admin": "^5.8.2",
     "firebase-functions": "^0.8.1",
+    "node-fetch": "^2.1.2",
     "request": "^2.83.0",
     "xmlhttprequest": "^1.8.0"
   },
