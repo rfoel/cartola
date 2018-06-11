@@ -27,5 +27,8 @@
   "homepage": "https://github.com/rfoel/cartola#readme",
   "devDependencies": {
     "concurrently": "^3.5.1"
+  },
+  "dependencies": {
+    "nodemon": "^1.17.5"
   }
 }
