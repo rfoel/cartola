@@ -60,4 +60,20 @@ app.post('/entrar', (req, res) => {
     })
 })
 
+app.get('/time', (req, res) => {
+  res.set('Cache-Control', 'public, max-age=300, s-maxage=600')
+  const options = {
+    headers: {
+      'Content-Type': 'application/json',
+      'X-GLB-Token': req.headers['x-glb-token']
+    }
+  }
+
+  fetch('https://api.cartolafc.globo.com/auth/time/', options)
+    .then(res => res.json())
+    .then(json => {
+      res.send(json)
+    })
+})
+
 exports.app = functions.https.onRequest(app)
