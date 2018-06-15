@@ -1,11 +1,8 @@
 import React from 'react'
-import { getFixtures } from '../utils/cartola'
 
 export default class Index extends React.Component {
   componentWillMount() {
     document.title = 'Blumpa'
-
-    getFixtures().then(response => console.log(response))
   }
 
   render() {

@@ -4,7 +4,7 @@ const fetch = require('node-fetch')
 const bodyParser = require('body-parser')
 
 const app = express()
-const port = 4000
+const port = 4040
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -18,9 +18,9 @@ app.get('/', (req, res) => {
   res.send({ message: 'Server running gracefully 🦄', timestamp: Date.now() })
 })
 
-app.get('/partidas', (req, res) => {
+app.get('/partidas/:rodada', (req, res) => {
   res.set('Cache-Control', 'public, max-age=300, s-maxage=600')
-  fetch('https://api.cartolafc.globo.com/partidas')
+  fetch(`https://api.cartolafc.globo.com/partidas/${req.params.rodada}`)
     .then(res => res.json())
     .then(json => {
       res.send(json)

@@ -5,7 +5,7 @@
   "scripts": {
     "api": "npm run --prefix api/functions dev",
     "web": "npm run --prefix web dev",
-    "dev": "concurrently --names \"web,api\" \"npm run --prefix web dev\" \"npm run --prefix api/functions dev\""
+    "dev": "concurrently --names \"web,api\" \"npm run web\" \"npm run api\""
   },
   "repository": {
     "type": "git",
